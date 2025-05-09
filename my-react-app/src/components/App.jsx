@@ -1,13 +1,15 @@
-import Router from './Router'
-import Home from './Home';
-import About from './About';
-import Logement from './Logement';
-import NotFound from './NotFound';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from '../layout/Layout';
+import Router from './Router';
 
 function App() {
-  return (<div>
-    <Router />
-    </div>)
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Router />
+      </Layout>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
